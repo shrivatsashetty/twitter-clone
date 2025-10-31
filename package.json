@@ -1,0 +1,29 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "description": "Twitter(X.com) clone usign tailwind css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss src/tailwind.css -o src/index.css --env production",
+    "serve": "npm run build && npm-run-all --parallel watch:styles serve:dev",
+    "watch:styles": "nodemon --watch src/tailwind.css --watch src/index.html --exec \"npm run build\"",
+    "serve:dev": "browser-sync start --server 'src' --files 'src/index.css, src/index.html'",
+    "dev": "npx @tailwindcss/cli -i ./src/tailwind.css -o ./src/index.css --watch"
+  },
+  "keywords": [
+    "tailwind"
+  ],
+  "author": "Shrivatsa Shetty",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "@tailwindcss/postcss": "^4.1.16",
+    "browser-sync": "^3.0.4",
+    "cssnano": "^7.1.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.16"
+  }
+}
