@@ -11,13 +11,18 @@
         <link href="./index.css" rel="stylesheet" />
         <title>Home/X</title>
     </head>
+
     <body class="bg-black text-white">
         <div
             class="page-content flex gap-x-1 border-2 border-solid rounded-sm p-1 w-[80vw] mx-auto box-border"
         >
-            <div class="col border-2 border-dashed w-[20%] flex flex-col gap-y-18">
-                <div class="flex flex-col gap-y-2 items-start">
-                    <span class="p-1.5 hover:bg-gray-800 rounded-full cursor-pointer">
+            <div
+                class="col-1 border-2 border-dashed w-[20%] flex flex-col gap-y-18 justify-between h-[90vh]"
+            >
+                <div class="flex flex-col gap-y-2 items-center lg:items-start">
+                    <span
+                        class="p-1.5 hover:bg-gray-800 rounded-full cursor-pointer"
+                    >
                         <img
                             src="./../assets/icons/twitter-favicon.svg"
                             alt="twitter-favicon"
@@ -25,43 +30,49 @@
                         />
                     </span>
 
-                    <span class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer ">
+                    <span
+                        class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer"
+                    >
                         <img
                             src="/assets/icons/home_icon.svg"
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span>Home</span>
+                        <span class="hidden lg:inline">Home</span>
                     </span>
 
-                    <span class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer ">
+                    <span
+                        class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer"
+                    >
                         <img
                             src="/assets/icons/chat.svg"
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span>Messages</span>
+                        <span class="hidden lg:inline">Messages</span>
                     </span>
 
-                    <span class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer ">
+                    <span
+                        class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer"
+                    >
                         <img
                             src="/assets/icons/bell.svg"
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span>Notifications</span>
+                        <span class="hidden lg:inline">Notifications</span>
                     </span>
 
-                    <span class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer ">
+                    <span
+                        class="p-1.5 pr-4 flex justify-end items-end gap-x-3 hover:bg-gray-800 rounded-full cursor-pointer"
+                    >
                         <img
                             src="/assets/icons/search.svg"
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span>Search</span>
+                        <span class="hidden lg:inline">Search</span>
                     </span>
-
-                 
 
                     <button
                         type="button"
@@ -71,30 +82,119 @@
                     </button>
                 </div>
 
-                <button class="flex flex-row justify-between -y-1 w-full hover:bg-gray-800 rounded-full cursor-pointer p-2">
+                <button
+                    class="flex flex-row justify-center lg:justify-between -y-1 w-full hover:bg-gray-800 rounded-full cursor-pointer p-2"
+                >
                     <div class="flex gap-x-3">
                         <img
                             src="/assets/icons/user-contacts.svg"
                             alt="User-Logo"
                             class="invert"
                         />
-    
-                        <div class="text-[10px] flex flex-col items-start">
-                            <p class="font-semibold text-xs" >Shrivatsa Shetty</p>
-                            <p class="font-light text-gray-50" >@ShrivatsaShetty</p>
+
+                        <div
+                            class="text-[10px] flex-col items-start hidden lg:inline"
+                        >
+                            <p class="font-semibold text-xs">
+                                Shrivatsa Shetty
+                            </p>
+                            <p class="font-light text-gray-50">
+                                @ShrivatsaShetty
+                            </p>
                         </div>
                     </div>
 
                     <img
                         src="/assets/icons/three-dots.svg"
                         alt="three-dots"
-                        class="invert"
+                        class="invert hidden lg:inline"
                     />
                 </button>
             </div>
 
-            <div class="col border-2 border-dashed w-[50%]">BB</div>
-            <div class="col border-2 border-dashed w-[30%]">CC</div>
+            <div class="col border-2 border-dashed grow">BB</div>
+
+            <div
+                class="col hidden border-2 border-dashed w-[30%] py-2 px-4 xl:flex flex-col gap-y-3"
+            >
+                <form
+                    class="border-2 border-solid border-gray-400 rounded-full p-2 flex gap-x-3"
+                >
+                    <img
+                        src="/assets/icons/search.svg"
+                        alt="search-icon"
+                        class="invert"
+                    />
+                    <input
+                        type="text"
+                        name="global-search"
+                        id="global-search"
+                        class="w-[80%] focus:outline-0"
+                        placeholder="Search"
+                    />
+                </form>
+
+                <div
+                    class="subscription flex flex-col border-2 border-solid border-gray-400 rounded-xl p-2 gap-y-3"
+                >
+                    <h3 class="text-lg font-extrabold">
+                        Subscribe to Premium
+                    </h3>
+
+                    <p class="text-sm font-light">
+                        Subscribe to unlock new features and if eligible, receive a share of revenue.
+                    </p>
+
+                    <button type="button" class=" bg-blue-500 py-2 px-4 rounded-full">
+                        <span class="font-extrabold" >
+                            Subscribe
+                        </span>
+                    </button>
+                </div>
+
+                <div class="todays-news flex flex-col border-2 border-solid border-gray-400 rounded-xl p-2 gap-y-4">
+                    <div class="heading flex justify-between items-center">
+                        <h3 class="text-lg font-bold" >Today's News</h3>
+                        <img src="/assets/icons/close.svg" alt="close" class="invert h-5">
+                    </div>
+
+                    <div class="news flex flex-col gap-y-6">
+                        <div class="new-card flex flex-col gap-y-2">
+                            <h4 class="font-semibold">India Levels T20I Series 1-1 with five Wicket Truimph over Australlia</h4>
+                            <div class="profiles flex">
+                                <img src="/assets/images/profile-pic-1.jpg" alt="user" class="h-5 rounded-full relative right-0 z-10" >
+                                <img src="/assets/images/profile-pic-2.jpg" alt="user" class="h-5 rounded-full relative right-3 z-5" >
+                                <img src="/assets/images/profile-pic-3.jpg" alt="user" class="h-5 rounded-full relative right-6 z-0" >
+                                <p class="text-xs text-gray-500 relative right-4" >2 hours ago · Sports · 9,543 posts</p>
+                            </div>
+                        </div>
+
+                        <div class="new-card flex flex-col gap-y-2">
+                            <h4 class="font-semibold">India Levels T20I Series 1-1 with five Wicket Truimph over Australlia</h4>
+                            <div class="profiles flex">
+                                <img src="/assets/images/profile-pic-1.jpg" alt="user" class="h-5 rounded-full relative right-0 z-10" >
+                                <img src="/assets/images/profile-pic-2.jpg" alt="user" class="h-5 rounded-full relative right-3 z-5" >
+                                <img src="/assets/images/profile-pic-3.jpg" alt="user" class="h-5 rounded-full relative right-6 z-0" >
+                                <p class="text-xs text-gray-500 relative right-4" >2 hours ago · Sports · 9,543 posts</p>
+                            </div>
+                        </div>
+
+                        <div class="new-card flex flex-col gap-y-2">
+                            <h4 class="font-semibold">India Levels T20I Series 1-1 with five Wicket Truimph over Australlia</h4>
+                            <div class="profiles flex">
+                                <img src="/assets/images/profile-pic-1.jpg" alt="user" class="h-5 rounded-full relative right-0 z-10" >
+                                <img src="/assets/images/profile-pic-2.jpg" alt="user" class="h-5 rounded-full relative right-3 z-5" >
+                                <img src="/assets/images/profile-pic-3.jpg" alt="user" class="h-5 rounded-full relative right-6 z-0" >
+                                <p class="text-xs text-gray-500 relative right-4" >2 hours ago · Sports · 9,543 posts</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     </body>
 </html>
