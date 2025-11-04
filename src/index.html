@@ -112,7 +112,36 @@
                 </button>
             </div>
 
-            <div class="col border-2 border-dashed grow">BB</div>
+            <div class="col-2 border-2 border-dashed grow relative flex flex-col ">
+                <div class="links flex justify-around p-4 border-b border-gray-300 ">
+                    <a href="#" class="font-light hover:font-bold">For You</a>
+                    <a href="#" class="font-light hover:font-bold">Following</a>
+                </div>
+
+                <div class="write-post flex p-3 gap-x-3 border-b border-gray-300">
+                    <img 
+                        src="/assets/images/profile-pic-1.jpg" 
+                        alt="profile-pic"
+                        class="h-11 rounded-full cursor-pointer"
+                    >
+
+                    <form class="post flex flex-col grow gap-y-7">
+                        <textarea name="comments" id="comments" rows="3" placeholder="What's happening?"
+                            class="w-full focus:outline-0 placeholder:text-lg"
+                        ></textarea>
+                        <div class="options flex justify-between">
+                            <div class="icons flex gap-x-2">
+                                <img src="/assets/icons/user-circle.svg" alt="" class="h-6 cursor-pointer invert">
+                                <img src="/assets/icons/smiley.svg" alt="" class="h-6 cursor-pointer invert">
+                                <img src="/assets/icons/geotag.svg" alt="" class="h-6 cursor-pointer invert">
+                                <img src="/assets/icons/gif.svg" alt="" class="h-6 cursor-pointer invert">
+                                <img src="/assets/icons/home_icon.svg" alt="" class="h-6 cursor-pointer invert">
+                            </div>
+                            <button type="button" class="bg-gray-300 text-black py-1 px-4 rounded-full cursor-pointer" >Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
             <div
                 class="col hidden border-2 border-dashed w-[30%] py-2 px-4 xl:flex flex-col gap-y-3"
