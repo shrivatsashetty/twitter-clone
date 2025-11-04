@@ -14,10 +14,10 @@
 
     <body class="bg-black text-white">
         <div
-            class="page-content flex gap-x-1 border-2 border-solid rounded-sm p-1 w-[80vw] mx-auto box-border"
+            class="page-content flex gap-x-1 rounded-sm p-1 w-[90vw] mx-auto box-border"
         >
             <div
-                class="col-1 border-2 border-dashed w-[20%] flex flex-col gap-y-18 justify-between h-[90vh]"
+                class="col-1 w-[25%] hidden sm:flex flex-col gap-y-18 justify-between h-[90vh] "
             >
                 <div class="flex flex-col gap-y-2 items-center lg:items-start">
                     <span
@@ -38,7 +38,17 @@
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span class="hidden lg:inline">Home</span>
+                        <span 
+                            class="
+                                hidden 
+                                lg:inline
+                                whitespace-nowrap
+                                overflow-hidden
+                                text-ellipsis
+                            "
+                        >
+                            Home
+                        </span>
                     </span>
 
                     <span
@@ -49,7 +59,18 @@
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span class="hidden lg:inline">Messages</span>
+                        <span 
+                            class="
+                                hidden 
+                                lg:inline
+                                whitespace-nowrap
+                                overflow-hidden
+                                text-ellipsis
+                            "
+                        
+                        >
+                            Messages
+                        </span>
                     </span>
 
                     <span
@@ -60,7 +81,18 @@
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span class="hidden lg:inline">Notifications</span>
+                        <span 
+                            class="
+                                hidden 
+                                lg:inline
+                                whitespace-nowrap
+                                overflow-hidden
+                                text-ellipsis
+                            "
+                        
+                        >
+                            Notifications
+                        </span>
                     </span>
 
                     <span
@@ -71,23 +103,46 @@
                             alt="home_icon"
                             class="invert h-7"
                         />
-                        <span class="hidden lg:inline">Search</span>
+                        <span 
+                            class="
+                                hidden 
+                                lg:inline
+                                whitespace-nowrap
+                                overflow-hidden
+                                text-ellipsis
+                            "
+                        
+                        >
+                            Search
+                        </span>
                     </span>
 
                     <button
                         type="button"
-                        class="w-full bg-amber-50 text-black rounded-full py-1 cursor-pointer"
+                        class="bg-amber-50 text-black rounded-full py-1  ml-1.5 cursor-pointer w-[85%]"
                     >
                         Post
                     </button>
                 </div>
 
                 <button
-                    class="flex flex-row justify-center lg:justify-between -y-1 w-full hover:bg-gray-800 rounded-full cursor-pointer p-2"
+                    class="
+                        flex 
+                        flex-row 
+                        justify-center 
+                        items-center
+                        lg:justify-between 
+                        gap-y-1 
+                        w-full 
+                        hover:bg-gray-800 
+                        rounded-full 
+                        cursor-pointer 
+                        p-2
+                    "
                 >
-                    <div class="flex gap-x-3">
+                    <div class="flex gap-x-1">
                         <img
-                            src="/assets/icons/user-contacts.svg"
+                            src="/assets/icons/user-circle.svg"
                             alt="User-Logo"
                             class="invert"
                         />
@@ -107,44 +162,245 @@
                     <img
                         src="/assets/icons/three-dots.svg"
                         alt="three-dots"
-                        class="invert hidden lg:inline"
+                        class="invert hidden lg:inline h-6"
                     />
                 </button>
             </div>
 
-            <div class="col-2 border-2 border-dashed grow relative flex flex-col ">
-                <div class="links flex justify-around p-4 border-b border-gray-300 ">
+            <div
+                class="col-2 grow relative flex flex-col border-x border-gray-300"
+            >
+                <div
+                    class="hamburger-menu hidden max-sm:flex justify-center p-2"
+                >
+                    <img
+                        src="/assets/images/profile-pic-1.jpg"
+                        alt="profile-pic"
+                        class="absolute top-2 left-4 h-9 sm:h-11 rounded-full"
+                    />
+                    <img
+                        src="/assets/icons/twitter-favicon.svg"
+                        alt="twitter-logo"
+                        class="h-9 sm:h-11"
+                    />
+                </div>
+
+                <div
+                    class="links flex justify-around p-4 border-b border-gray-300"
+                >
                     <a href="#" class="font-light hover:font-bold">For You</a>
                     <a href="#" class="font-light hover:font-bold">Following</a>
                 </div>
 
-                <div class="write-post flex p-3 gap-x-3 border-b border-gray-300">
-                    <img 
-                        src="/assets/images/profile-pic-1.jpg" 
+                <div
+                    class="write-post flex p-3 gap-x-3 border-b border-gray-300"
+                >
+                    <img
+                        src="/assets/images/profile-pic-1.jpg"
                         alt="profile-pic"
-                        class="h-11 rounded-full cursor-pointer"
-                    >
+                        class="h-9 sm:h-11 rounded-full cursor-pointer"
+                    />
 
                     <form class="post flex flex-col grow gap-y-7">
-                        <textarea name="comments" id="comments" rows="3" placeholder="What's happening?"
+                        <textarea
+                            name="comments"
+                            id="comments"
+                            rows="3"
+                            placeholder="What's happening?"
                             class="w-full focus:outline-0 placeholder:text-lg"
                         ></textarea>
                         <div class="options flex justify-between">
                             <div class="icons flex gap-x-2">
-                                <img src="/assets/icons/user-circle.svg" alt="" class="h-6 cursor-pointer invert">
-                                <img src="/assets/icons/smiley.svg" alt="" class="h-6 cursor-pointer invert">
-                                <img src="/assets/icons/geotag.svg" alt="" class="h-6 cursor-pointer invert">
-                                <img src="/assets/icons/gif.svg" alt="" class="h-6 cursor-pointer invert">
-                                <img src="/assets/icons/home_icon.svg" alt="" class="h-6 cursor-pointer invert">
+                                <img
+                                    src="/assets/icons/user-circle.svg"
+                                    alt=""
+                                    class="h-5 sm:h-6 cursor-pointer invert"
+                                />
+                                <img
+                                    src="/assets/icons/smiley.svg"
+                                    alt=""
+                                    class="h-5 sm:h-6 cursor-pointer invert"
+                                />
+                                <img
+                                    src="/assets/icons/geotag.svg"
+                                    alt=""
+                                    class="h-5 sm:h-6 cursor-pointer invert"
+                                />
+                                <img
+                                    src="/assets/icons/gif.svg"
+                                    alt=""
+                                    class="h-5 sm:h-6 cursor-pointer invert"
+                                />
+                                <img
+                                    src="/assets/icons/home_icon.svg"
+                                    alt=""
+                                    class="h-5 sm:h-6 cursor-pointer invert"
+                                />
                             </div>
-                            <button type="button" class="bg-gray-300 text-black py-1 px-4 rounded-full cursor-pointer" >Post</button>
+
+                            <button
+                                type="button"
+                                class="
+                                    bg-gray-300
+                                    text-black 
+                                    max-sm:py-0.5 
+                                    max-sm:px-2 
+                                    max-sm:text-sm 
+                                    py-1 
+                                    px-4 
+                                    rounded-full 
+                                    cursor-pointer
+                                "
+                            >
+                                Post
+                            </button>
                         </div>
                     </form>
                 </div>
+
+                <!-- for posts -->
+                <div
+                    class="write-post flex p-3 gap-x-3 border-b border-gray-300"
+                >
+                    <img
+                        src="/assets/images/profile-pic-1.jpg"
+                        alt="profile-pic"
+                        class="h-9 sm:h-11 rounded-full cursor-pointer"
+                    />
+
+                    <div
+                        class="post-content flex flex-col gap-y-2 overflow-hidden"
+                    >
+                        <div class="post-heading flex gap-2">
+                            <p
+                                class="user-fullname max-sm:text-sm font-bold whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                Shrivatsa Shetty
+                            </p>
+
+                            <img
+                                src="/assets/icons/verified-icon.svg"
+                                alt="verified-icon"
+                                class="invert max-sm:h-4"
+                            />
+
+                            <p
+                                class="username max-sm:text-sm font-light whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                @ShrivatsaShetty
+                            </p>
+                        </div>
+
+                        <p class="post-body">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sequi delectus consequuntur libero cumque
+                            ipsum recusandae eveniet optio dicta perferendis
+                        </p>
+
+                        <div class="actions flex gap-x-2 justify-between">
+                            <img
+                                src="/assets/icons/like.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/comment.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/download.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/repost.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/save-to-collection.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                        </div>
+
+                    </div>
+                </div>
+
+                <div
+                    class="write-post flex p-3 gap-x-3 border-b border-gray-300"
+                >
+                    <img
+                        src="/assets/images/profile-pic-1.jpg"
+                        alt="profile-pic"
+                        class="h-9 sm:h-11 rounded-full cursor-pointer"
+                    />
+
+                    <div
+                        class="post-content flex flex-col gap-y-2 overflow-hidden"
+                    >
+                        <div class="post-heading flex gap-2">
+                            <p
+                                class="user-fullname max-sm:text-sm font-bold whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                Shrivatsa Shetty
+                            </p>
+
+                            <img
+                                src="/assets/icons/verified-icon.svg"
+                                alt="verified-icon"
+                                class="invert max-sm:h-4"
+                            />
+
+                            <p
+                                class="username max-sm:text-sm font-light whitespace-nowrap overflow-hidden text-ellipsis"
+                            >
+                                @ShrivatsaShetty
+                            </p>
+                        </div>
+
+                        <p class="post-body">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Sequi delectus consequuntur libero cumque
+                            ipsum recusandae eveniet optio dicta perferendis
+                        </p>
+
+                        <div class="actions flex gap-x-2 justify-between">
+                            <img
+                                src="/assets/icons/like.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/comment.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/download.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/repost.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                            <img
+                                src="/assets/icons/save-to-collection.svg"
+                                alt=""
+                                class="h-5 sm:h-6 cursor-pointer invert"
+                            />
+                        </div>
+
+                    </div>
+                </div>               
+
             </div>
 
             <div
-                class="col hidden border-2 border-dashed w-[30%] py-2 px-4 xl:flex flex-col gap-y-3"
+                class="col-3 hidden w-[30%] h-[90vh] py-2 px-4 xl:flex flex-col gap-y-3 overflow-y-scroll"
             >
                 <form
                     class="border-2 border-solid border-gray-400 rounded-full p-2 flex gap-x-3"
@@ -166,63 +422,122 @@
                 <div
                     class="subscription flex flex-col border-2 border-solid border-gray-400 rounded-xl p-2 gap-y-3"
                 >
-                    <h3 class="text-lg font-extrabold">
-                        Subscribe to Premium
-                    </h3>
+                    <h3 class="text-lg font-extrabold">Subscribe to Premium</h3>
 
                     <p class="text-sm font-light">
-                        Subscribe to unlock new features and if eligible, receive a share of revenue.
+                        Subscribe to unlock new features and if eligible,
+                        receive a share of revenue.
                     </p>
 
-                    <button type="button" class=" bg-blue-500 py-2 px-4 rounded-full">
-                        <span class="font-extrabold" >
-                            Subscribe
-                        </span>
+                    <button
+                        type="button"
+                        class="bg-blue-500 py-2 px-4 rounded-full"
+                    >
+                        <span class="font-extrabold"> Subscribe </span>
                     </button>
                 </div>
 
-                <div class="todays-news flex flex-col border-2 border-solid border-gray-400 rounded-xl p-2 gap-y-4">
+                <div
+                    class="todays-news flex flex-col border-2 border-solid border-gray-400 rounded-xl p-2 gap-y-4"
+                >
                     <div class="heading flex justify-between items-center">
-                        <h3 class="text-lg font-bold" >Today's News</h3>
-                        <img src="/assets/icons/close.svg" alt="close" class="invert h-5">
+                        <h3 class="text-lg font-bold">Today's News</h3>
+                        <img
+                            src="/assets/icons/close.svg"
+                            alt="close"
+                            class="invert h-5"
+                        />
                     </div>
 
                     <div class="news flex flex-col gap-y-6">
                         <div class="new-card flex flex-col gap-y-2">
-                            <h4 class="font-semibold">India Levels T20I Series 1-1 with five Wicket Truimph over Australlia</h4>
+                            <h4 class="font-semibold">
+                                India Levels T20I Series 1-1 with five Wicket
+                                Truimph over Australlia
+                            </h4>
                             <div class="profiles flex">
-                                <img src="/assets/images/profile-pic-1.jpg" alt="user" class="h-5 rounded-full relative right-0 z-10" >
-                                <img src="/assets/images/profile-pic-2.jpg" alt="user" class="h-5 rounded-full relative right-3 z-5" >
-                                <img src="/assets/images/profile-pic-3.jpg" alt="user" class="h-5 rounded-full relative right-6 z-0" >
-                                <p class="text-xs text-gray-500 relative right-4" >2 hours ago · Sports · 9,543 posts</p>
+                                <img
+                                    src="/assets/images/profile-pic-1.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-0 z-10"
+                                />
+                                <img
+                                    src="/assets/images/profile-pic-2.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-3 z-5"
+                                />
+                                <img
+                                    src="/assets/images/profile-pic-3.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-6 z-0"
+                                />
+                                <p
+                                    class="text-xs text-gray-500 relative right-4"
+                                >
+                                    2 hours ago · Sports · 9,543 posts
+                                </p>
                             </div>
                         </div>
 
                         <div class="new-card flex flex-col gap-y-2">
-                            <h4 class="font-semibold">India Levels T20I Series 1-1 with five Wicket Truimph over Australlia</h4>
+                            <h4 class="font-semibold">
+                                India Levels T20I Series 1-1 with five Wicket
+                                Truimph over Australlia
+                            </h4>
                             <div class="profiles flex">
-                                <img src="/assets/images/profile-pic-1.jpg" alt="user" class="h-5 rounded-full relative right-0 z-10" >
-                                <img src="/assets/images/profile-pic-2.jpg" alt="user" class="h-5 rounded-full relative right-3 z-5" >
-                                <img src="/assets/images/profile-pic-3.jpg" alt="user" class="h-5 rounded-full relative right-6 z-0" >
-                                <p class="text-xs text-gray-500 relative right-4" >2 hours ago · Sports · 9,543 posts</p>
+                                <img
+                                    src="/assets/images/profile-pic-1.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-0 z-10"
+                                />
+                                <img
+                                    src="/assets/images/profile-pic-2.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-3 z-5"
+                                />
+                                <img
+                                    src="/assets/images/profile-pic-3.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-6 z-0"
+                                />
+                                <p
+                                    class="text-xs text-gray-500 relative right-4"
+                                >
+                                    2 hours ago · Sports · 9,543 posts
+                                </p>
                             </div>
                         </div>
 
                         <div class="new-card flex flex-col gap-y-2">
-                            <h4 class="font-semibold">India Levels T20I Series 1-1 with five Wicket Truimph over Australlia</h4>
+                            <h4 class="font-semibold">
+                                India Levels T20I Series 1-1 with five Wicket
+                                Truimph over Australlia
+                            </h4>
                             <div class="profiles flex">
-                                <img src="/assets/images/profile-pic-1.jpg" alt="user" class="h-5 rounded-full relative right-0 z-10" >
-                                <img src="/assets/images/profile-pic-2.jpg" alt="user" class="h-5 rounded-full relative right-3 z-5" >
-                                <img src="/assets/images/profile-pic-3.jpg" alt="user" class="h-5 rounded-full relative right-6 z-0" >
-                                <p class="text-xs text-gray-500 relative right-4" >2 hours ago · Sports · 9,543 posts</p>
+                                <img
+                                    src="/assets/images/profile-pic-1.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-0 z-10"
+                                />
+                                <img
+                                    src="/assets/images/profile-pic-2.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-3 z-5"
+                                />
+                                <img
+                                    src="/assets/images/profile-pic-3.jpg"
+                                    alt="user"
+                                    class="h-5 rounded-full relative right-6 z-0"
+                                />
+                                <p
+                                    class="text-xs text-gray-500 relative right-4"
+                                >
+                                    2 hours ago · Sports · 9,543 posts
+                                </p>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
-
             </div>
         </div>
     </body>
